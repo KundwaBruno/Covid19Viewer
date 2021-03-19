@@ -7,7 +7,7 @@ const App = () => (
   <Router>
     <Switch>
       <Route path='/' exact component={Landing} />
-      <Route path='/:country' exact component={Result} />
+      <Route path='/:search' exact component={Result} />
     </Switch>
   </Router>
 );

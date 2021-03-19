@@ -12,7 +12,7 @@ const Search = () => {
 
   const goto = (e) => {
     e.preventDefault();
-    window.location.replace(`/country=${username}`);
+    window.location.replace(`/search?q=${username}`);
   };
 
   return (

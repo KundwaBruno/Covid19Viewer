@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const Result = () => {
   const [result, setResult] = useState(null);
-  let username = window.location.href.split('country=')[1];
+  let username = window.location.href.split('q=')[1];
   const url = `https://covid-193.p.rapidapi.com/statistics?country=${username}`;
   const key = 'fff1fce876msh0b3711dc206a7b5p18fa5bjsn4ddbf320a268';
   const host = 'covid-193.p.rapidapi.com';
@@ -75,6 +75,20 @@ const Result = () => {
       )}
       {result && (
         <div className='result-container'>
+          <span
+            style={{
+              color: '#409ECD',
+              fontSize: '1rem',
+              fontFamily: 'Raleway',
+              cursor: 'pointer',
+              textDecoration: 'underline'
+            }}
+            onClick={() => {
+              window.location.replace('/');
+            }}
+          >
+            Back to Home
+          </span>
           <div className='header'>
             <span id='country-name'>{`${result.country} Covid-19`}</span>
             <br />
